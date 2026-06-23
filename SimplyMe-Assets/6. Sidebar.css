@@ -1,0 +1,12 @@
+/* ===========================================================================
+                          6. SIDEBAR (NAVIGATION PANEL)
+   =========================================================================== */
+   
+/* Use this if you a translucent sidebar */
+/* Comment this one out if you prefer the default sidebar */
+
+.mainDrawer {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    backdrop-filter: blur(25px) !important;
+    -webkit-backdrop-filter: blur(25px) !important;
+}

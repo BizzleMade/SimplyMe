@@ -1,0 +1,15 @@
+/* ===========================================================================
+                      5. BACKDROP DETAIL IMAGE (STATIONARY)
+   =========================================================================== */
+
+/* Use this if you want your backdrop detail images to be stationary */
+/* Comment this one out if you like backdrop detail images to scroll with the page */
+
+.layout-desktop #itemDetailPage:not(.no-backdrop) .detailImageContainer {
+    position: fixed !important;
+    top: 27.2rem !important;
+    left: 5.8rem !important;
+    width: 24rem !important;
+    padding: 0 !important;
+    z-index: 3 !important;
+}

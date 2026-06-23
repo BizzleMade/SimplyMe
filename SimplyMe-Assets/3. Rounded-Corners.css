@@ -1,0 +1,127 @@
+/* ===========================================================================
+                 3. ROUNDED CORNERS & ROUNDED SQUARE PLAY BUTTON
+   =========================================================================== */
+
+/* Use this if you like rounded corners for a more modern look and feel */
+/* Comment this one out if you don't like rounded corners and prefer the default look */
+
+body {
+  --rounding: 15px;
+}
+
+progress {
+  border-radius: var(--rounding) !important;
+}
+progress::-webkit-progress-bar {
+  border-radius: var(--rounding) !important;
+}
+progress::-moz-progress-bar {
+  border-radius: var(--rounding) !important;
+}
+progress::-webkit-progress-value {
+  border-radius: var(--rounding) !important;
+}
+.taskProgressOuter,
+.taskProgressInner {
+  border-radius: var(--rounding) !important;
+}
+.formDialogHeader {
+  border-top-left-radius: var(--rounding) !important;
+  border-top-right-radius: var(--rounding) !important;
+}
+.formDialogFooter {
+  border-bottom-left-radius: var(--rounding) !important;
+  border-bottom-right-radius: var(--rounding) !important;
+}
+.cardOverlayContainer {
+  border-radius: var(--rounding) !important;
+}
+
+/* Grouped Selector Array */
+.missingIndicator, 
+.unairedIndicator,
+.detailTable,
+.primaryImageWrapper > img,
+.toast,
+.paperList,
+.cardContent,
+.sessionNowPlayingInnerContent, 
+.listItem:hover, 
+.cardImage,
+.fab,
+.raised,
+.multiSelectCheckboxOutline,
+.itemSelectionPanel,
+.cardContent-button, 
+.cardContent-shadow, 
+.itemDetailImage, 
+.cardOverlayButton-hover,
+.cardImageContainer,
+.cardPadder,
+.listItemImage,
+.listItemImageButton,
+.listItemButton,
+.headerButton,
+.paper-icon-button-light,
+.innerCardFooter,
+.blurhash-canvas,
+.dialog,
+.countIndicator,
+.playedIndicator,
+.listItemIcon,
+.listItem-border,
+.button-flat,
+.visualCardBox,
+.checkboxOutline,
+.emby-select-withcolor,
+.chapterThumbTextContainer,
+.chapterThumbContainer,
+.chapterThumb,
+.emby-input, 
+.emby-textarea, 
+.nowPlayingPageImage,
+.upNextDialog-poster-img,
+.upNextContainer,
+.cardOverlayButtonIcon {
+  border-radius: var(--rounding) !important;
+  overflow: hidden !important;
+}
+
+.actionSheetMenuItem:hover {
+  border-radius: 0 !important;
+}
+
+fieldset {
+  border-radius: var(--rounding) !important;
+}
+
+.osdPoster img {
+  border-radius: var(--rounding) !important; 
+  border: none !important;
+}
+
+/* Range Sliders */
+.mdl-slider::-moz-range-thumb {
+  border-radius: var(--rounding) !important;
+}
+.mdl-slider::-ms-thumb {
+  border-radius: var(--rounding) !important;
+}
+.mdl-slider::-webkit-slider-thumb {
+  border-radius: var(--rounding) !important;
+}
+
+/* Control Button Clusters */
+div[data-role="controlgroup"] a[data-role="button"]:first-child {
+  border-bottom-left-radius: var(--rounding) !important;
+  border-top-left-radius: var(--rounding) !important;
+}
+div[data-role="controlgroup"] a[data-role="button"]:last-child {
+  border-bottom-right-radius: var(--rounding) !important;
+  border-top-right-radius: var(--rounding) !important;
+}
+
+#dashboardPage .cardContent, 
+#dashboardPage .sessionNowPlayingInnerContent {
+  border-radius: var(--rounding) !important;
+}
