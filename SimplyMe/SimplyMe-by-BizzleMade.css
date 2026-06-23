@@ -1,0 +1,453 @@
+/* ===========================================================================
+                             Simply Me by BizzleMade
+   =========================================================================== */
+/* ===========================================================================
+                         1. TRANSPARENT HEADER (TOP BAR)
+   =========================================================================== */
+
+/* Use this if you want a transparent header (Top Bar) */
+/* Comment this one out if you don't want a transparent header and want the default header */   
+
+.skinHeader,
+.skinHeader-withBackground,
+.skinHeader-blurred {
+    background-color: transparent !important;
+    background-image: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: none !important;
+}
+
+/* ===========================================================================
+                               2. BLUR & GRADIENTS
+   =========================================================================== */
+
+/* Blurless unless the value is changed */
+/* Comment this one out if you prefer the default blur of the UI */
+
+.backgroundContainer.withBackdrop {
+    background-color: transparent !important;
+    background-image: none !important;
+    backdrop-filter: blur(0px) !important;
+}
+
+/* Use this if you want a professional looking full screen gradient */
+/* Comment this one out if you prefer the default gradient or the one below */
+
+.backgroundContainer.withBackdrop::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.45) 50%, rgba(0, 0, 0, 0.55) 100%) !important;
+    z-index: -1 !important;
+    pointer-events: none !important;
+}
+
+/* Use this if you just want a top gradient leaving the middle and bottom untouched */
+/* Uncomment this one if you prefer a top gradient over the default or the one above */
+/*
+.backgroundContainer.withBackdrop::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.20) 25%, transparent 60%) !important;
+    z-index: -1 !important;
+    pointer-events: none !important;
+} */
+
+/* ===========================================================================
+                 3. ROUNDED CORNERS & ROUNDED SQUARE PLAY BUTTON
+   =========================================================================== */
+
+/* Use this if you like rounded corners for a more modern look and feel */
+/* Comment this one out if you don't like rounded corners and prefer the default look */
+
+body {
+  --rounding: 15px;
+}
+
+progress {
+  border-radius: var(--rounding) !important;
+}
+progress::-webkit-progress-bar {
+  border-radius: var(--rounding) !important;
+}
+progress::-moz-progress-bar {
+  border-radius: var(--rounding) !important;
+}
+progress::-webkit-progress-value {
+  border-radius: var(--rounding) !important;
+}
+.taskProgressOuter,
+.taskProgressInner {
+  border-radius: var(--rounding) !important;
+}
+.formDialogHeader {
+  border-top-left-radius: var(--rounding) !important;
+  border-top-right-radius: var(--rounding) !important;
+}
+.formDialogFooter {
+  border-bottom-left-radius: var(--rounding) !important;
+  border-bottom-right-radius: var(--rounding) !important;
+}
+.cardOverlayContainer {
+  border-radius: var(--rounding) !important;
+}
+
+/* Grouped Selector Array */
+.missingIndicator, 
+.unairedIndicator,
+.detailTable,
+.primaryImageWrapper > img,
+.toast,
+.paperList,
+.cardContent,
+.sessionNowPlayingInnerContent, 
+.listItem:hover, 
+.cardImage,
+.fab,
+.raised,
+.multiSelectCheckboxOutline,
+.itemSelectionPanel,
+.cardContent-button, 
+.cardContent-shadow, 
+.itemDetailImage, 
+.cardOverlayButton-hover,
+.cardImageContainer,
+.cardPadder,
+.listItemImage,
+.listItemImageButton,
+.listItemButton,
+.headerButton,
+.paper-icon-button-light,
+.innerCardFooter,
+.blurhash-canvas,
+.dialog,
+.countIndicator,
+.playedIndicator,
+.listItemIcon,
+.listItem-border,
+.button-flat,
+.visualCardBox,
+.checkboxOutline,
+.emby-select-withcolor,
+.chapterThumbTextContainer,
+.chapterThumbContainer,
+.chapterThumb,
+.emby-input, 
+.emby-textarea, 
+.nowPlayingPageImage,
+.upNextDialog-poster-img,
+.upNextContainer,
+.cardOverlayButtonIcon {
+  border-radius: var(--rounding) !important;
+  overflow: hidden !important;
+}
+
+.actionSheetMenuItem:hover {
+  border-radius: 0 !important;
+}
+
+fieldset {
+  border-radius: var(--rounding) !important;
+}
+
+.osdPoster img {
+  border-radius: var(--rounding) !important; 
+  border: none !important;
+}
+
+/* Range Sliders */
+.mdl-slider::-moz-range-thumb {
+  border-radius: var(--rounding) !important;
+}
+.mdl-slider::-ms-thumb {
+  border-radius: var(--rounding) !important;
+}
+.mdl-slider::-webkit-slider-thumb {
+  border-radius: var(--rounding) !important;
+}
+
+/* Control Button Clusters */
+div[data-role="controlgroup"] a[data-role="button"]:first-child {
+  border-bottom-left-radius: var(--rounding) !important;
+  border-top-left-radius: var(--rounding) !important;
+}
+div[data-role="controlgroup"] a[data-role="button"]:last-child {
+  border-bottom-right-radius: var(--rounding) !important;
+  border-top-right-radius: var(--rounding) !important;
+}
+
+#dashboardPage .cardContent, 
+#dashboardPage .sessionNowPlayingInnerContent {
+  border-radius: var(--rounding) !important;
+}
+
+/* ===========================================================================
+                     4. EPISDOE LIST VIEW (GRID AND COMPACT)
+   =========================================================================== */
+   
+/* Use this if you want the episode list to have a grid view */
+/* Comment this one out if you want the default episode list or the one below */
+
+.itemsContainer.padded-right.vertical-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media all and (min-width: 2000px) {
+  .listItemImage-large {
+    height: 9.5vw;
+  }
+}
+
+@media all and (max-width: 2000px) {
+  .itemsContainer.padded-right.vertical-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .itemsContainer.padded-right.vertical-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.layout-mobile
+  .itemsContainer.padded-right.vertical-list {
+  grid-template-columns: 1fr;
+}
+
+#itemDetailPage .listItem-content {
+  border-radius: var(--rounding);
+  overflow: hidden;
+  transition: background 0.15s ease-in-out;
+  flex-flow: column;
+  -webkit-transition: background 0.15s ease-in-out;
+  -moz-transition: background 0.15s ease-in-out;
+  -ms-transition: background 0.15s ease-in-out;
+  -o-transition: background 0.15s ease-in-out;
+}
+
+.listItemImage.listItemImage-large {
+  width: 100%;
+  margin: 0;
+}
+
+.listItem-overview.listItemBodyText {
+  height: 5.5em !important;
+  font-size: 1em !important;
+}
+
+.layout-mobile .listItemImageButton-icon {
+  padding: 0;
+  top: 0.34em;
+  position: absolute !important;
+  font-size: 1.5em !important;
+  right: 3em;
+}
+
+#itemDetailPage .listItem {
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  border-radius: var(--rounding);
+  padding: .5em;
+}
+
+#itemDetailPage .secondary.listItem-overview.listItemBodyText {
+  height: 100%;
+  margin: 0;
+}
+
+.listItem[data-mediatype="Audio"] {
+  padding: 0 1em;
+  border-radius: var(--rounding) !important;
+  -webkit-border-radius: var(--rounding) !important;
+  -moz-border-radius: var(--rounding) !important;
+  -ms-border-radius: var(--rounding) !important;
+  -o-border-radius: var(--rounding) !important;
+}
+
+.layout-mobile #itemDetailPage .listItemImageButton {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  color: white;
+}
+
+.layout-mobile .listItemIndicators {
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.layout-mobile .playedIndicator {
+  width: 2em;
+  height: 2em;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-shadow: none;
+}
+
+.layout-mobile .listItemIndicators .indicatorIcon.check {
+  z-index: 2;
+}
+
+.layout-mobile .listItemBodyText {
+  max-width: 36vw;
+}
+
+@media all and (min-width: 50em) {
+  .layout-mobile .listItemBodyText {
+    max-width: 100%;
+  }
+}
+
+.layout-mobile .listItem .playedIndicator {
+  background: transparent !important;
+  color: rgba(var(--accent));
+}
+
+.layout-mobile .listItemImage {
+  height: 100% !important;
+  width: 100% !important;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  border-radius: var(--rounding) !important;
+}
+
+.layout-mobile  .listItemImageButton:hover {
+    transform: scale(1);
+}
+
+.layout-mobile .listViewUserDataButtons {
+  position: absolute;
+  right: 0;
+  top: 1.25em;
+  padding-right: 1em;
+}
+
+.layout-mobile .listItemButton {
+  padding: 0 0.556em !important;
+}
+
+.layout-mobile #itemDetailPage .listItem-content {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  align-items: flex-start;
+}
+
+.layout-mobile #itemDetailPage .listItem-content {
+  background: none !important;
+  position: unset;
+  color: white;
+}
+
+.listItemImageButton {
+  margin: auto;
+  font-size: 1.6em !important;
+}
+.listItemBody.itemAction,
+.listItem-bottomoverview.secondary{
+  z-index: 1;
+}
+.listItem-bottomoverview.secondary{
+  text-align: justify;
+  padding: .5em;
+  margin: 0;
+}
+
+/* Use this if you want the episode list to have a compact view */
+/* Uncomment this one if you don't like the default episode list or the one above */
+/*
+.listItemImage.listItemImage-large.itemAction.lazy {
+  transition: filter 0.2s
+}
+.listItemImageButton-icon {
+  padding: 0;
+}
+.secondary.listItem-overview.listItemBodyText {
+  height: unset !important;
+  margin: 0;
+}
+.listItemImageButton {
+  margin: auto; 
+  font-size: 1.6em !important;
+}
+@media all and (min-width: 100em){
+  .listItemImage.listItemImage-large.itemAction.lazy {
+    height: 160px !important;
+  }
+  .listItem-content {
+    height: unset !important;
+  }
+  .secondary.listItem-overview.listItemBodyText {
+    height: unset !important;
+    margin: 0;
+  }
+}
+@media all and (max-width: 100em){
+  .listItemImage.listItemImage-large.itemAction.lazy {height: 160px !important;}
+  .listItem-content {height: unset !important;}
+  .secondary.listItem-overview.listItemBodyText {height: unset !important; margin: 0;}
+}
+
+.missingIndicator, .unairedIndicator {
+    background: #ae3030eb;
+    padding: .3em .6em;
+    color: #fff;
+}
+.layout-mobile .listItemImageButton {
+    background: rgba(0, 0, 0, 0);
+} */
+
+/* ===========================================================================
+                      5. BACKDROP DETAIL IMAGE (STATIONARY)
+   =========================================================================== */
+
+/* Use this if you want your backdrop detail images to be stationary */
+/* Comment this one out if you like backdrop detail images to scroll with the page */
+
+.layout-desktop #itemDetailPage:not(.no-backdrop) .detailImageContainer {
+    position: fixed !important;
+    top: 27.2rem !important;
+    left: 5.8rem !important;
+    width: 24rem !important;
+    padding: 0 !important;
+    z-index: 3 !important;
+}
+
+/* ===========================================================================
+                          6. SIDEBAR (NAVIGATION PANEL)
+   =========================================================================== */
+   
+/* Use this if you a translucent sidebar */
+/* Comment this one out if you prefer the default sidebar */
+
+.mainDrawer {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    backdrop-filter: blur(25px) !important;
+    -webkit-backdrop-filter: blur(25px) !important;
+}
+
+/* ===========================================================================
+                                   END OF CODE
+   =========================================================================== */
